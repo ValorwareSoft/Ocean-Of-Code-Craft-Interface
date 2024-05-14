@@ -4,15 +4,21 @@
 
 
     <br>
-    <button (click)="navigate('home')">home</button>
-    <button (click)="navigate('about us')">about us</button>
-    <button (click)="navigate('contact-us')">contact-us</button>
-    <button (click)="navigate('get-custom-code')">get-custom-code</button>
-    <button (click)="navigate('sign-up')">sign-up</button>
-    <button (click)="navigate('login')">login</button>
-    <button (click)="navigate('mode')">mode</button>
-    <button (click)="navigate('profile')">profile</button>
-    <button (click)="navigate('change-password')">change-password</button>
-    <button (click)="navigate('logout')">logout</button>
+    <button class="button-color-1" (click)="navigate('home')">home</button>
+    <button class="button-color-2" (click)="navigate('about us')">about us</button>
+    <button class="button-color-1" (click)="navigate('contact-us')">contact-us</button>
+    <button class="button-color-1" (click)="navigate('get-custom-code')">get-custom-code</button>
+    <button class="button-color-3" (click)="navigate('sign-up')">sign-up</button>
+    <button class="button-color-1" (click)="navigate('login')">login</button>
+ 
+    <button class="button-color-1" (click)="navigate('profile')">profile</button>
+    <button class="button-color-4" (click)="navigate('change-password')">change-password</button>
+    <button class="button-color-1" (click)="navigate('logout')">logout</button>
 </div>
+
+<button (click)="toggleTheme()" >
+    Toggle {{themeService.isDarkMode ? 'Light' : 'Dark'}} Mode
+</button>
+
+
 <router-outlet></router-outlet>

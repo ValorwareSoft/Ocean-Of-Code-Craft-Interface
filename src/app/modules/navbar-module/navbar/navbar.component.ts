@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
+import { ThemeService } from 'src/app/services/theme-service/theme.service';
 
 @Component({
   selector: 'app-navbar',
@@ -10,7 +11,7 @@ import { Router, RouterModule } from '@angular/router';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent {
-  constructor(private router: Router) {}
+  constructor(private router: Router, public themeService : ThemeService) {}
 
   navigate(link: string) {
     switch (link) {
@@ -45,5 +46,9 @@ export class NavbarComponent {
         this.router.navigate(['/home']);
         break;
     }
+  }
+
+  toggleTheme(){
+    this.themeService.toggleDarkMode();
   }
 }

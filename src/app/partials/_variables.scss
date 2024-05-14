@@ -1,0 +1,58 @@
+.dark-theme {
+    --background-color: #202020;
+    --text-color: #fff;
+    --h1-text-color: red;
+    --p-color: yellow;
+    --span-color: #267687;
+    --button-color-1: #245645;
+    --button-color-2: #dc05f4;
+    --button-color-3: #452ebb;
+    --button-color-4: #ddda13;
+}
+
+.light-theme {
+    --background-color: #fff;
+    --text-color: #333;
+    --h1-text-color: blue;
+    --p-color: green;
+    --span-color: #202020;
+    --button-color-1: #deb911;
+    --button-color-2: #4809db;
+    --button-color-3: #bb2e4a;
+    --button-color-4: #13dd2b;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+h1 {
+    color: var(--h1-text-color);
+}
+
+p {
+    color: var(--p-color);
+}
+
+
+span {
+    color: var(--span-color);
+}
+
+
+.button-color-1 {
+    background-color: var(--button-color-1);
+}
+
+.button-color-2 {
+    background-color: var(--button-color-2);
+}
+
+.button-color-3 {
+    background-color: var(--button-color-3);
+}
+
+.button-color-4 {
+    background-color: var(--button-color-4);
+}
