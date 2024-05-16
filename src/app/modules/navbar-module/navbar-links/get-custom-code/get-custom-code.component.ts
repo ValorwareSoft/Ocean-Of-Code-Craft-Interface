@@ -9,5 +9,9 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./get-custom-code.component.scss']
 })
 export class GetCustomCodeComponent {
+  showDetails: boolean = false;
 
+  toggleDetails(): void {
+    this.showDetails = !this.showDetails;
+  }
 }

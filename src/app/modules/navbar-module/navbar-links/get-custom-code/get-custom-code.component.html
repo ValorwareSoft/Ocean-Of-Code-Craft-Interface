@@ -1,1 +1,67 @@
-<p>get-custom-code works!</p>
+<div class="main">
+  <div class="header">
+    <p class="text-center heading">Design Your Custom Code <span class="d-none d-md-inline">&nbsp; - &nbsp;</span> <span
+        class="d-md-none"> <br> </span> Let's
+      Bring
+      Your
+      Ideas to Life!</p>
+    <p class="text-center sub-heading">
+      Design your custom code by inputting your requirements, and receive
+      tailored solutions crafted by our team, with updates delivered straight to
+      your inbox. <span (click)="toggleDetails()">{{ showDetails ? 'Know less...' : 'Know more...' }}</span>
+    </p>
+    <div *ngIf="showDetails">
+      <p class="side-heading pt-3">Here's how it works:</p>
+      <ol class="normal-text">
+        <li class="pb-2">
+          <span class="header">Input Your Design : </span>
+          <span class="text">Tell us about your coding needs and the specific features or
+            functionalities you require. Whether it's a customized chart, form, or
+            any other component, we're here to bring your ideas to life!</span>
+        </li>
+        <li class="pb-2">
+          <span class="header">Tailored Solutions : </span><span class="text">Our team of experienced developers will
+            craft a custom code solution
+            based on your input. We'll ensure that your design requirements are
+            met and that the code generated aligns perfectly with your
+            vision.</span>
+        </li>
+
+        <li class="pb-2">
+          <span class="header">Stay Updated : </span><span class="text">
+            Once your custom code is ready, we'll notify you promptly via email.
+            You'll receive a link to access and download your personalized code
+            solution directly from our website.</span>
+        </li>
+      </ol>
+    </div>
+  </div>
+  <div class="body-content">
+    <div class="row">
+      <div class="mb-3 col-md-6">
+        <label for="firstName" class="form-label">First Name *</label>
+        <input type="text" class="form-control" placeholder="Enter First Name" />
+      </div>
+      <div class="mb-3 col-md-6">
+        <label for="lastName" class="form-label">Last Name </label>
+        <input type="text" class="form-control" placeholder="Enter Last Name (Optional)" />
+      </div>
+      <div class="mb-3 col-md-6">
+        <label for="emailAddress" class="form-label">Email Address *</label>
+        <input type="email" class="form-control" placeholder="Enter Email Address" />
+      </div>
+      <div class="mb-3 col-md-6">
+        <label for="phoneNumber" class="form-label">Phone Number </label>
+        <input type="text" class="form-control" placeholder="Enter Phone Number (Optional)" />
+      </div>
+      <div class="mb-3">
+        <label for="requirement" class="form-label">Describe Your Requirement *</label>
+        <textarea class="form-control" rows="3" placeholder="Describe Your Requirement In Detail Here..."></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="referenceFile" class="form-label">Upload Image or PDF File for Reference</label>
+        <input class="form-control" type="file">
+      </div>
+    </div>
+  </div>
+</div>

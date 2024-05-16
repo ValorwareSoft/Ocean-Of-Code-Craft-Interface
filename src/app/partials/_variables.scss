@@ -7,7 +7,7 @@
 
 .light-theme {
   --background-color: #fff;
-  --text-color: #333;
+  --text-color: #202020;
   --sub-title-color: #575757;
   --nav-text-color: #202020;
 }
@@ -38,11 +38,15 @@
 body {
   background-color: var(--background-color);
   color: var(--text-color);
+  font-family: "Poppins", sans-serif !important;
+  overflow: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
-.sub-title {
-  color: var(--sub-title-color);
-}
+
 
 .nav-link {
   color: var(--nav-text-color) !important;
@@ -86,4 +90,88 @@ body {
 
 ::ng-deep .bg-light {
   background-color: var(--background-color) !important;
+}
+
+
+.heading {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 0px !important;
+  padding-bottom: 8px;
+  font-size: calc(16px + (30 - 16) * ((100vw - 320px) / (1920 - 320)));
+
+}
+
+.sub-title {
+  color: var(--sub-title-color);
+}
+
+.sub-heading {
+  font-size: 14px;
+  font-size: calc(11px + (14 - 11) * ((100vw - 320px) / (1920 - 320)));
+  color: var(--sub-title-color);
+}
+
+.side-heading {
+  font-size: 16px;
+  font-weight: 450;
+  margin-bottom: 10px;
+  font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
+}
+
+
+.normal-text {
+  padding-left: 20px !important;
+  text-align: justify;
+  font-size: calc(12px + (14 - 12) * ((100vw - 320px) / (1920 - 320)));
+
+  .text {
+    color: var(--sub-title-color);
+
+  }
+}
+
+
+input[type="text"],
+[type="email"] {
+  background-color: transparent !important;
+  border-color: var(--sub-title-color) !important;
+  color: var(--text-color) !important;
+  border: 1px solid var(--text-color) !important;
+  font-size: 14px !important;
+  height: 40px !important;
+}
+
+textarea {
+  background-color: transparent !important;
+  border-color: var(--sub-title-color) !important;
+  color: var(--text-color) !important;
+  border: 1px solid var(--text-color) !important;
+  font-size: 14px !important;
+}
+
+input[type="file"] {
+  background-color: transparent !important;
+  border-color: var(--sub-title-color) !important;
+  color: var(--text-color) !important;
+  border: 1px solid var(--text-color) !important;
+  font-size: 14px !important;
+
+}
+
+.form-control:focus {
+  box-shadow: none !important;
+}
+
+label {
+  font-size: 12px;
+}
+
+.form-label {
+  margin-bottom: 5px !important;
+}
+
+.form-control::placeholder {
+  color: var(--sub-title-color) !important;
+  font-size: 12px;
 }

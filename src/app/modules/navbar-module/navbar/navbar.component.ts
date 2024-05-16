@@ -18,7 +18,7 @@ export class NavbarComponent {
     private toastr: ToastrService
   ) { }
  
-  login: boolean = false;
+  login: boolean = true;
   navigate(link: string) {
     switch (link) {
       case 'home':
