@@ -137,7 +137,7 @@ input[type="text"],
   background-color: transparent !important;
   border-color: var(--sub-title-color) !important;
   color: var(--text-color) !important;
-  border: 1px solid var(--text-color) !important;
+  border: 1px solid var(--sub-title-color) !important;
   font-size: 14px !important;
   height: 40px !important;
 }
@@ -146,7 +146,7 @@ textarea {
   background-color: transparent !important;
   border-color: var(--sub-title-color) !important;
   color: var(--text-color) !important;
-  border: 1px solid var(--text-color) !important;
+  border: 1px solid var(--sub-title-color) !important;
   font-size: 14px !important;
 }
 
@@ -154,7 +154,7 @@ input[type="file"] {
   background-color: transparent !important;
   border-color: var(--sub-title-color) !important;
   color: var(--text-color) !important;
-  border: 1px solid var(--text-color) !important;
+  border: 1px solid var(--sub-title-color) !important;
   font-size: 14px !important;
 
 }
@@ -174,4 +174,25 @@ label {
 .form-control::placeholder {
   color: var(--sub-title-color) !important;
   font-size: 12px;
+}
+
+.btn-primary {
+  background-color: var(--text-color) !important;
+  color: var(--background-color) !important;
+  font-size: 14px !important;
+  border: none !important;
+  min-width: 130px !important;
+}
+
+.body-content {
+  border: 1px solid var(--text-color);
+  border-radius: 30px;
+
+  @media screen and (max-width : 768px) {
+    border-radius: 20px !important;
+  }
+
+  @media screen and (min-width : 768px) {
+    border-radius: 30px !important;
+  }
 }
