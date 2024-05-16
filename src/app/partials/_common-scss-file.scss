@@ -1,13 +1,9 @@
 :host {
-    display: block;
-    background-color: var(--background-color);
-    color: var(--text-color);
+  display: block;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
-h1 {
-    color: var(--h1-text-color);
-}
-
-p {
-    color: var(--p-color);
+::ng-deep .bg-light {
+  background-color: var(--background-color) !important;
 }

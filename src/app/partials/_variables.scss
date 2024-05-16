@@ -1,58 +1,89 @@
 .dark-theme {
-    --background-color: #202020;
-    --text-color: #fff;
-    --h1-text-color: red;
-    --p-color: yellow;
-    --span-color: #267687;
-    --button-color-1: #245645;
-    --button-color-2: #dc05f4;
-    --button-color-3: #452ebb;
-    --button-color-4: #ddda13;
+  --background-color: #202020;
+  --text-color: #fff;
+  --sub-title-color: #b7b4b4;
+  --nav-text-color: #ffffff;
 }
 
 .light-theme {
-    --background-color: #fff;
-    --text-color: #333;
-    --h1-text-color: blue;
-    --p-color: green;
-    --span-color: #202020;
-    --button-color-1: #deb911;
-    --button-color-2: #4809db;
-    --button-color-3: #bb2e4a;
-    --button-color-4: #13dd2b;
+  --background-color: #fff;
+  --text-color: #333;
+  --sub-title-color: #575757;
+  --nav-text-color: #202020;
+}
+
+.li-custom-button {
+  align-items: center !important;
+  display: flex !important;
+  padding: 0px 10px 0px 20px;
+  cursor: pointer;
+
+  i {
+    font-size: 1rem !important;
+  }
+
+  a {
+    color: var(--nav-text-color) !important;
+  }
+
+  @media (max-width: 992px) {
+    display: none !important;
+  }
+
+  @media screen and (min-width: 992px) {
+    display: flex !important;
+  }
 }
 
 body {
-    background-color: var(--background-color);
-    color: var(--text-color);
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
-h1 {
-    color: var(--h1-text-color);
+.sub-title {
+  color: var(--sub-title-color);
 }
 
-p {
-    color: var(--p-color);
+.nav-link {
+  color: var(--nav-text-color) !important;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 14px !important;
+  cursor: pointer;
+
+  @media (max-width: 992px) {
+    font-size: 12px !important;
+    padding: 5px 0px !important;
+    padding-left: 10px !important;
+  }
+
+  @media screen and (min-width: 992px) {
+    font-size: 14px !important;
+    padding: 8px !important;
+  }
 }
 
+.navbar-collapse {
+  @media (max-width: 992px) {
+    padding-top: 15px !important;
+  }
 
-span {
-    color: var(--span-color);
+  @media screen and (min-width: 992px) {
+    padding-top: 0px !important;
+  }
 }
 
-
-.button-color-1 {
-    background-color: var(--button-color-1);
+.navbar-toggler {
+  border: none !important;
+  color: var(--nav-text-color) !important;
+  padding: 0px !important;
 }
 
-.button-color-2 {
-    background-color: var(--button-color-2);
+.navbar-toggler:focus {
+  box-shadow: none !important;
 }
 
-.button-color-3 {
-    background-color: var(--button-color-3);
-}
-
-.button-color-4 {
-    background-color: var(--button-color-4);
+::ng-deep .bg-light {
+  background-color: var(--background-color) !important;
 }

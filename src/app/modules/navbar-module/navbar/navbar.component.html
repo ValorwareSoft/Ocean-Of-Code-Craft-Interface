@@ -1,24 +1,60 @@
-<div>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, minus? Voluptas minima obcaecati maiores unde eos
-    quibusdam deleniti animi rem officia saepe, necessitatibus beatae pariatur atque dolor. Modi, libero aliquam.
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <div class="d-flex align-items-center" (click)="navigate('home')">
+      <div>
+        <img src="../../../../assets/images/logo.png" alt="Logo" width="60" height="60" />
+      </div>
+      <div class="ps-1 d-grid">
+        <span class="title">Ocean of Code Craft</span>
+        <span class="sub-title">A Product by Valorware Soft</span>
+      </div>
+    </div>
+    <div>
+      <button class="navbar-toggler custom-button" type="button" (click)="toggleTheme()">
+        <i *ngIf="themeService.isDarkMode" class="bi bi-moon-fill"></i>
+        <i *ngIf="!themeService.isDarkMode" class="bi bi-brightness-high-fill"></i>
+      </button>
+      <button class="navbar-toggler ps-3" type="button" data-bs-toggle="collapse" 
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <i class="bi bi-list"></i>
+      </button>
+      
+    </div>
+    <div class="collapse navbar-collapse d-lg-flex justify-content-end" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" (click)="navigate('home')">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="navigate('about-us')">About Us</a>
+        </li>
 
+        <li class="nav-item">
+          <a class="nav-link" (click)="navigate('contact-us')">Contact Us</a>
+        </li>
 
-    <br>
-    <button class="button-color-1" (click)="navigate('home')">home</button>
-    <button class="button-color-2" (click)="navigate('about us')">about us</button>
-    <button class="button-color-1" (click)="navigate('contact-us')">contact-us</button>
-    <button class="button-color-1" (click)="navigate('get-custom-code')">get-custom-code</button>
-    <button class="button-color-3" (click)="navigate('sign-up')">sign-up</button>
-    <button class="button-color-1" (click)="navigate('login')">login</button>
- 
-    <button class="button-color-1" (click)="navigate('profile')">profile</button>
-    <button class="button-color-4" (click)="navigate('change-password')">change-password</button>
-    <button class="button-color-1" (click)="navigate('logout')">logout</button>
+        <li class="nav-item">
+          <a class="nav-link" (click)="navigate('get-custom-code')">Get Customised Code</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" (click)="navigate('sign-up')">Sign Up</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="navigate('login')">Login</a>
+        </li>
+        <li class="nav-item li-custom-button">
+          <a (click)="toggleTheme()">
+            <i *ngIf="themeService.isDarkMode" class="bi bi-moon-fill"></i>
+            <i *ngIf="!themeService.isDarkMode" class="bi bi-brightness-high-fill"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <router-outlet></router-outlet>
 </div>
-
-<button (click)="toggleTheme()" >
-    Toggle {{themeService.isDarkMode ? 'Light' : 'Dark'}} Mode
-</button>
-
-
-<router-outlet></router-outlet>
