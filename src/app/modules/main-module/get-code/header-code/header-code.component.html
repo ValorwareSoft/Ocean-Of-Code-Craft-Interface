@@ -1,1 +1,15 @@
 <p>header-code works!</p>
+<div *ngIf="showHtml">
+    <h3>HTML Code</h3>
+    <pre>{{ htmlCode }}</pre>
+  </div>
+  
+  <div *ngIf="showTs">
+    <h3>Typescript Code</h3>
+    <pre>{{ tsCode }}</pre>
+  </div>
+  
+  <div *ngIf="showScss">
+    <h3>SCSS Code</h3>
+    <pre>{{ scssCode }}</pre>
+  </div>
