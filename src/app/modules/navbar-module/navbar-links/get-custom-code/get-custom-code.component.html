@@ -1,11 +1,8 @@
 <div class="main">
   <div class="header">
-    <p class="text-center heading">Design Your Custom Code <span class="d-none d-md-inline">&nbsp; - &nbsp;</span> <span
-        class="d-md-none"> <br> </span> Let's
-      Bring
-      Your
-      Ideas to Life!</p>
-    <p class="text-center sub-heading">
+    <p class="text-center main-heading">Get Your Custom Code
+    </p>
+    <p class="text-center main">
       Design your custom code by inputting your requirements, and receive
       tailored solutions crafted by our team, with updates delivered straight to
       your inbox. <span (click)="toggleDetails()">{{ showDetails ? 'Know less...' : 'Know more...' }}</span>
@@ -46,23 +43,23 @@
           <label for="requirement" class="form-label">Describe Your Requirement *</label>
           <textarea class="form-control" formControlName="requirement" rows="3"
             placeholder="Describe Your Requirement In Detail Here..."></textarea>
-          <div *ngIf="customCodeForm.get('requirement')?.invalid && (customCodeForm.get('requirement')?.dirty || customCodeForm.get('requirement')?.touched)" class="text-danger">
-            <div *ngIf="customCodeForm.get('requirement')?.errors?.['required']">Requirement description is required</div>
-            <div *ngIf="customCodeForm.get('requirement')?.errors?.['minlength'] && !customCodeForm.get('requirement')?.errors?.['required']">Minimum 20 characters required</div>
+          <div
+            *ngIf="customCodeForm.get('requirement')?.invalid && (customCodeForm.get('requirement')?.dirty || customCodeForm.get('requirement')?.touched)"
+            class="text-danger">
+            <div *ngIf="customCodeForm.get('requirement')?.errors?.['required']">Requirement description is required
+            </div>
+            <div
+              *ngIf="customCodeForm.get('requirement')?.errors?.['minlength'] && !customCodeForm.get('requirement')?.errors?.['required']">
+              Minimum 20 characters required</div>
             <div *ngIf="customCodeForm.get('requirement')?.errors?.['maxlength']">Maximum 1000 characters allowed</div>
           </div>
         </div>
         <div class="mb-3 position-relative">
           <div class="input-wrapper">
             <label for="referenceFile" class="form-label">Upload Image or PDF File for Reference</label>
-            <input
-              type="file"
-              class="form-control"
-              formControlName="referenceFile"
-              accept=".jpg, .jpeg, .png, .pdf"
-              (change)="referenceFile($event)"
-            />
-        
+            <input type="file" class="form-control" formControlName="referenceFile" accept=".jpg, .jpeg, .png, .pdf"
+              (change)="referenceFile($event)" />
+
             <div *ngIf="fileUploaded" class="remove-icon">
               <i class="bi bi-x" [matTooltip]="REMOVE_FILE" (click)="removeFile()"></i>
             </div>
@@ -78,8 +75,8 @@
             </div>
           </div>
         </div>
-        
-        
+
+
 
         <div class="mt-5 d-flex justify-content-end ">
           <button class="btn btn-primary" type="submit" [disabled]="customCodeForm.invalid">Send</button>
@@ -90,4 +87,3 @@
 
 
 </div>
-

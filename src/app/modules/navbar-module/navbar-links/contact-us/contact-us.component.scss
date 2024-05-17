@@ -34,3 +34,17 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none; 
   margin: 0; 
 }
+
+
+.main-heading {
+    font-size: calc(30px + 2 * (100vw - 320px) / 1600);
+    font-weight: 600;
+    color: var(--text-color);   
+}
+
+
+.main {
+    font-size: calc(14px + 2 * (100vw - 320px) / 1600);
+    line-height: 1.7;
+    color: var(--sub-title-color);
+}
