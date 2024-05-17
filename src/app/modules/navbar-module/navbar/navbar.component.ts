@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
 import { ThemeService } from 'src/app/services/theme-service/theme.service';
 import { ToastrService } from 'ngx-toastr';
+import { MatTooltipModule} from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, MatTooltipModule],
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
 })
@@ -17,7 +18,8 @@ export class NavbarComponent {
     public themeService: ThemeService,
     private toastr: ToastrService
   ) { }
- 
+  readonly SWITCH_TO_DARK_MODE : string = 'Switch To Dark Mode';
+  readonly SWITCH_TO_LIGHT_MODE : string = 'Switch To Light Mode';
   login: boolean = true;
   navigate(link: string) {
     switch (link) {

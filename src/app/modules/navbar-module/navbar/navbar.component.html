@@ -31,11 +31,11 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" (click)="navigate('contact-us')">Contact Us</a>
+          <a class="nav-link" (click)="navigate('get-custom-code')">Get Customised Code</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" (click)="navigate('get-custom-code')">Get Customised Code</a>
+          <a class="nav-link" (click)="navigate('contact-us')">Contact Us</a>
         </li>
 
         <li class="nav-item">
@@ -46,8 +46,8 @@
         </li>
         <li class="nav-item li-custom-button">
           <a (click)="toggleTheme()">
-            <i *ngIf="themeService.isDarkMode" class="bi bi-moon-fill"></i>
-            <i *ngIf="!themeService.isDarkMode" class="bi bi-brightness-high-fill"></i>
+            <i *ngIf="themeService.isDarkMode" class="bi bi-moon-fill" [matTooltip]="SWITCH_TO_LIGHT_MODE"></i>
+            <i *ngIf="!themeService.isDarkMode" class="bi bi-brightness-high-fill" [matTooltip]="SWITCH_TO_DARK_MODE"></i>
           </a>
         </li>
       </ul>
