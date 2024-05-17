@@ -37,37 +37,70 @@
     </div>
   </div>
   <div class="body-content ">
-    <div class="row">
-      <div class="mb-4">
-        <p class="text-center heading">Submit Your Request</p>
+    <form [formGroup]="customCodeForm" (ngSubmit)="onSubmit()">
+      <div class="row">
+        <div class="mb-4">
+          <p class="text-center heading">Submit Your Request</p>
+        </div>
+        <div class="mb-3 col-md-6">
+          <label for="firstName" class="form-label">First Name *</label>
+          <input type="text" class="form-control" formControlName="firstName" placeholder="Enter First Name" />
+          <div *ngIf="customCodeForm.get('firstName')?.invalid && (customCodeForm.get('firstName')?.dirty || customCodeForm.get('firstName')?.touched)" class="text-danger">
+            <div *ngIf="customCodeForm.get('firstName')?.errors?.['required']">First Name is required</div>
+            <div *ngIf="customCodeForm.get('firstName')?.errors?.['minlength']">Minimum 2 characters required</div>
+            <div *ngIf="customCodeForm.get('firstName')?.errors?.['maxlength']">Maximum 30 characters allowed</div>
+            <div *ngIf="customCodeForm.get('firstName')?.errors?.['pattern']">Only alphabets and spaces allowed</div>
+          </div>
+        </div>
+        <div class="mb-3 col-md-6">
+          <label for="lastName" class="form-label">Last Name </label>
+          <input type="text" class="form-control" formControlName="lastName" placeholder="Enter Last Name (Optional)" />
+          <div *ngIf="customCodeForm.get('lastName')?.invalid && (customCodeForm.get('lastName')?.dirty || customCodeForm.get('lastName')?.touched)" class="text-danger">
+            <div *ngIf="customCodeForm.get('lastName')?.errors?.['minlength']">Minimum 2 characters required</div>
+            <div *ngIf="customCodeForm.get('lastName')?.errors?.['maxlength']">Maximum 30 characters allowed</div>
+            <div *ngIf="customCodeForm.get('lastName')?.errors?.['pattern']">Only alphabets and spaces allowed</div>
+          </div>
+        </div>
+        <div class="mb-3 col-md-6">
+          <label for="emailAddress" class="form-label">Email Address *</label>
+          <input type="email" class="form-control" formControlName="emailAddress" placeholder="Enter Email Address" />
+          <div *ngIf="customCodeForm.get('emailAddress')?.invalid && (customCodeForm.get('emailAddress')?.dirty || customCodeForm.get('emailAddress')?.touched)" class="text-danger">
+            <div *ngIf="customCodeForm.get('emailAddress')?.errors?.['required']">Email is required</div>
+            <div *ngIf="customCodeForm.get('emailAddress')?.errors?.['pattern']">Invalid email format</div>
+          </div>
+        </div>
+        <div class="mb-3 col-md-6">
+          <label for="phoneNumber" class="form-label">Phone Number </label>
+          <input type="number" class="form-control" formControlName="phoneNumber" placeholder="Enter 10 Digits Phone Number (Optional)" />
+          <div *ngIf="customCodeForm.get('phoneNumber')?.invalid && (customCodeForm.get('phoneNumber')?.dirty || customCodeForm.get('phoneNumber')?.touched)" class="text-danger">
+            <div *ngIf="customCodeForm.get('phoneNumber')?.errors?.['pattern']">Invalid phone number </div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="requirement" class="form-label">Describe Your Requirement *</label>
+          <textarea class="form-control" formControlName="requirement" rows="3" placeholder="Describe Your Requirement In Detail Here..."></textarea>
+          <div *ngIf="customCodeForm.get('requirement')?.invalid && (customCodeForm.get('requirement')?.dirty || customCodeForm.get('requirement')?.touched)" class="text-danger">
+            <div *ngIf="customCodeForm.get('requirement')?.errors?.['required']">Requirement description is required</div>
+            <div *ngIf="customCodeForm.get('requirement')?.errors?.['minlength']">Minimum 20 characters required</div>
+            <div *ngIf="customCodeForm.get('requirement')?.errors?.['maxlength']">Maximum 1000 characters allowed</div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="referenceFile" class="form-label">Upload Image or PDF File for Reference</label>
+          <input type="file" class="form-control" formControlName="referenceFile" accept=".jpg, .jpeg, .png, .pdf" />
+          <div *ngIf="customCodeForm.get('referenceFile')?.invalid && (customCodeForm.get('referenceFile')?.dirty || customCodeForm.get('referenceFile')?.touched)" class="text-danger">
+            <div *ngIf="customCodeForm.get('referenceFile')?.errors?.['invalidFile']">Only JPG, JPEG, PNG, or PDF files are allowed</div>
+            <div *ngIf="customCodeForm.get('referenceFile')?.errors?.['invalidFileTypeOrSize']">Invalid file type or size (only JPG, JPEG, PNG, or PDF files less than 5MB are allowed)</div>
+          </div>
+        </div>
+        
+        
+        
+        
+        <div class="mt-3 d-flex justify-content-end ">
+          <button class="btn btn-primary" type="submit" [disabled]="customCodeForm.invalid" >Send</button>
+        </div>
       </div>
-      <div class="mb-3 col-md-6">
-        <label for="firstName" class="form-label">First Name *</label>
-        <input type="text" class="form-control" placeholder="Enter First Name" />
-      </div>
-      <div class="mb-3 col-md-6">
-        <label for="lastName" class="form-label">Last Name </label>
-        <input type="text" class="form-control" placeholder="Enter Last Name (Optional)" />
-      </div>
-      <div class="mb-3 col-md-6">
-        <label for="emailAddress" class="form-label">Email Address *</label>
-        <input type="email" class="form-control" placeholder="Enter Email Address" />
-      </div>
-      <div class="mb-3 col-md-6">
-        <label for="phoneNumber" class="form-label">Phone Number </label>
-        <input type="text" class="form-control" placeholder="Enter Phone Number (Optional)" />
-      </div>
-      <div class="mb-3">
-        <label for="requirement" class="form-label">Describe Your Requirement *</label>
-        <textarea class="form-control" rows="3" placeholder="Describe Your Requirement In Detail Here..."></textarea>
-      </div>
-      <div class="mb-3">
-        <label for="referenceFile" class="form-label">Upload Image or PDF File for Reference</label>
-        <input class="form-control" type="file">
-      </div>
-      <div class="mt-3 d-flex justify-content-end ">
-        <button class="btn btn-primary" type="submit">Send</button>
-      </div>
-    </div>
+    </form>
   </div>
 </div>
