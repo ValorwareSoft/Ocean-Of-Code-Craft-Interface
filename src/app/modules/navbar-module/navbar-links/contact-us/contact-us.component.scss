@@ -1,0 +1,52 @@
+.body-content {
+    max-width: 700px;
+    margin: auto;
+    margin-top: 50px !important;
+    padding: 40px 30px;
+
+    @media screen and (max-width : 768px) {
+        padding: 30px 20px !important;
+        max-width: 400px !important;
+    }
+
+    @media screen and (min-width : 768px) {
+        padding: 40px 30px !important;
+        max-width: 700px !important;
+    }
+}
+
+.sub-heading {
+    span {
+        cursor: pointer;
+    }
+}
+
+.text-danger {
+    font-size: 10px !important;
+    margin-top: 4px;
+    color: red !important;
+}
+
+textarea {
+    overflow: scroll;
+    max-height: 300px;
+
+    &::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+        cursor: pointer;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: none;
+        cursor: pointer;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #878686;
+        border: 1px solid #878686;
+        border-radius: 9px;
+        background-clip: content-box;
+        cursor: pointer;
+    }
+}

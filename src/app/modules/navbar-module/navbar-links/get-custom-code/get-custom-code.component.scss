@@ -20,3 +20,55 @@
         cursor: pointer;
     }
 }
+
+textarea {
+    overflow: scroll;
+    max-height: 300px;
+
+    &::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+        cursor: pointer;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: none;
+        cursor: pointer;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #878686;
+        border: 1px solid #878686;
+        border-radius: 9px;
+        background-clip: content-box;
+        cursor: pointer;
+    }
+}
+
+.custom-tooltip {
+    --bs-tooltip-bg: var(--bd-violet-bg);
+    --bs-tooltip-color: var(--bs-white);
+  }
+
+
+
+.input-wrapper {
+    position: relative;
+}
+
+.remove-icon {
+    position: absolute;
+    right: 1px;
+    top: 35%;
+    cursor: pointer;
+    color: red;
+    font-size: 2em;
+}
+
+
+
+.text-danger {
+    font-size: 10px !important;
+    margin-top: 4px;
+    color: red !important;
+}

@@ -133,7 +133,8 @@ body {
 
 
 input[type="text"],
-[type="email"], [type="number"] {
+[type="email"],
+[type="number"] {
   background-color: transparent !important;
   border-color: var(--sub-title-color) !important;
   color: var(--text-color) !important;
@@ -156,6 +157,7 @@ input[type="file"] {
   color: var(--text-color) !important;
   border: 1px solid var(--sub-title-color) !important;
   font-size: 14px !important;
+  padding-right: 30px !important;
 
 }
 
@@ -200,5 +202,5 @@ label {
 .text-danger {
   font-size: 10px !important;
   margin-top: 4px;
-  color: #FF4D4D !important;
+  color: red !important;
 }
