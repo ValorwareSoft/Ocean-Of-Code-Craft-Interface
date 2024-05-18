@@ -7,9 +7,9 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { ToastrService } from 'ngx-toastr';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { FooterComponent } from "../../../pages-module/footer/footer/footer.component";
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-get-custom-code',
@@ -24,7 +24,7 @@ export class GetCustomCodeComponent {
   fileUploaded: boolean = false;
   readonly REMOVE_FILE: string = 'Remove File';
 
-  constructor(private formBuilder: FormBuilder, private toastr: ToastrService) {
+  constructor(private formBuilder: FormBuilder, private router: Router) {
     this.customCodeForm = this.formBuilder.group({
       requirement: [
         '',
@@ -85,11 +85,10 @@ export class GetCustomCodeComponent {
 
   onSubmit(): void {
     if (this.customCodeForm.valid) {
-      this.toastr.success('Request Submitted Successfully');
-      console.log('Form values:', this.customCodeForm.value);
+      this.router.navigate(['/popup/#', 'submitted']);
     } else {
       this.customCodeForm.markAllAsTouched();
-      this.toastr.error('Please Fill The Form Properly');
+      this.router.navigate(['/popup/#', 'failure']);
     }
   }
 

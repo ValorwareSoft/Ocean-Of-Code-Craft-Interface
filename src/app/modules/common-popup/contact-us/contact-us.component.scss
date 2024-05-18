@@ -1,0 +1,54 @@
+.success,
+.failed {
+    height: 100vh;
+    width: 100vw;
+    padding: 20px;
+}
+
+.bi {
+    font-size: 70px !important;
+}
+
+
+.text-style-1 {
+    font-size: calc(18px + 3 * (100vw - 320px) / 1600);
+    font-weight: 800;
+}
+
+.red-color {
+    color: red;
+}
+
+.green-color {
+    color: #25D366;
+}
+
+.text-style-2 {
+    font-size: calc(15px + 3 * (100vw - 320px) / 1600);
+    color: var(--sub-title-color);
+}
+
+.text-style-3 {
+    font-size: calc(14px + 3 * (100vw - 320px) / 1600);
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .bi {
+        font-size: 20px !important;
+        padding-right: 10px;
+    }
+}
+
+.cross {
+    position: absolute !important;
+    top: 10px !important;
+    right: 10px !important;
+    cursor: pointer;
+
+    .bi {
+        font-size: 20px !important;
+    }
+}

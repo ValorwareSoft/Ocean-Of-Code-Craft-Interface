@@ -19,6 +19,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./modules/main-module/main.module').then((mod) => mod.MainModule),
   },
+  {
+    path : 'popup',
+    loadChildren: () =>
+      import('./modules/common-popup/common-popup.module').then((mod) => mod.CommonPopupModule),
+  }
 ];
 
 @NgModule({
