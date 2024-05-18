@@ -4,11 +4,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { MatTooltipModule } from '@angular/material/tooltip';
 
 @Component({
-  selector: 'app-contact-us',
+  selector: 'app-pop-up',
   standalone: true,
   imports: [CommonModule, MatTooltipModule],
-  templateUrl: './contact-us.component.html',
-  styleUrls: ['./contact-us.component.scss']
+  templateUrl: './pop-up.component.html',
+  styleUrls: ['./pop-up.component.scss']
 })
 export class ContactUsComponent {
   result: any;
