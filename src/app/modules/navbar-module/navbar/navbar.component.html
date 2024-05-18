@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-light">
+<nav class="navbar navbar-expand-lg bg-light fixed-top">
   <div class="container-fluid">
     <div class="d-flex align-items-center" (click)="navigate('home')">
       <div>
@@ -14,12 +14,12 @@
         <i *ngIf="themeService.isDarkMode" class="bi bi-moon-fill"></i>
         <i *ngIf="!themeService.isDarkMode" class="bi bi-brightness-high-fill"></i>
       </button>
-      <button class="navbar-toggler ps-3" type="button" data-bs-toggle="collapse" 
+      <button class="navbar-toggler ps-3" type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
         aria-label="Toggle navigation">
         <i class="bi bi-list"></i>
       </button>
-      
+
     </div>
     <div class="collapse navbar-collapse d-lg-flex justify-content-end" id="navbarSupportedContent">
       <ul class="navbar-nav">
@@ -46,8 +46,9 @@
         </li>
         <li class="nav-item li-custom-button">
           <a (click)="toggleTheme()">
-            <i *ngIf="themeService.isDarkMode" class="bi bi-moon-fill" [matTooltip]="SWITCH_TO_LIGHT_MODE"></i>
-            <i *ngIf="!themeService.isDarkMode" class="bi bi-brightness-high-fill" [matTooltip]="SWITCH_TO_DARK_MODE"></i>
+            <i *ngIf="themeService.isDarkMode" class="bi bi-moon-fill" matTooltipPosition="above" [matTooltip]="SWITCH_TO_LIGHT_MODE"></i>
+            <i *ngIf="!themeService.isDarkMode" class="bi bi-brightness-high-fill"
+              [matTooltip]="SWITCH_TO_DARK_MODE" matTooltipPosition="above"></i>
           </a>
         </li>
       </ul>
@@ -55,6 +56,9 @@
   </div>
 </nav>
 
-<div class="content">
-  <router-outlet></router-outlet>
+<div class="wrapper">
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+  <app-footer></app-footer>
 </div>

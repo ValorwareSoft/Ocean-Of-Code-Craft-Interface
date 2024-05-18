@@ -60,4 +60,8 @@
     font-size: calc(14px + 2 * (100vw - 320px) / 1600);
     line-height: 1.7;
     color: var(--sub-title-color);
+
+    span {
+        cursor: pointer !important;
+    }
 }
