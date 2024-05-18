@@ -10,7 +10,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
   templateUrl: './pop-up.component.html',
   styleUrls: ['./pop-up.component.scss']
 })
-export class ContactUsComponent {
+export class PopUpComponent {
   result: any;
 
   readonly CLOSE: string = 'Close';

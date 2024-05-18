@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ContactUsComponent } from './pop-up/pop-up.component';
+import { PopUpComponent } from './pop-up/pop-up.component';
 
 
 const routes: Routes = [
   {
-    path: '#/:result', component: ContactUsComponent
+    path: '#/:result', component: PopUpComponent
   }
 ]
 
