@@ -369,3 +369,12 @@ body {
   background-color: var(--background-color) !important;
 }
 
+
+.header{
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+li::marker{
+  color: var(--text-color);
+}

@@ -1,11 +1,11 @@
 <div class="main">
-  <div class="header">
+  <div>
     <p class="text-center main-heading">Get Your Custom Code
     </p>
     <p class="text-center main">
       Design your custom code by inputting your requirements, and receive
       tailored solutions crafted by our team, with updates delivered straight to
-      your inbox. <span (click)="toggleDetails()">{{ showDetails ? 'Know less...' : 'Know more...' }}</span>
+      your inbox. <span (click)="toggleDetails()" class="cursor-pointer" >{{ showDetails ? 'Know less...' : 'Know more...' }}</span>
     </p>
     <div *ngIf="showDetails">
       <p class="side-heading pt-3">Here's how it works:</p>

@@ -21,6 +21,9 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    @media screen and (max-width : 992px) {
+        min-height: 93vh !important;
+    }
 }
 
 .content {
