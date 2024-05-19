@@ -39,14 +39,14 @@ const routes: Routes = [
         path: 'get-custom-code',
         component: GetCustomCodeComponent,
       },
-      {
-        path: 'sign-up',
-        component: SignUpComponent,
-      },
-      {
-        path: 'login',
-        component: LoginComponent,
-      },
+      // {
+      //   path: 'sign-up',
+      //   component: SignUpComponent,
+      // },
+      // {
+      //   path: 'login',
+      //   component: LoginComponent,
+      // },
       {
         path: 'profile',
         component: ProfileComponent,

@@ -61,7 +61,9 @@
     </div>
   </div>
 </nav>
-
+<div style="display: none;">
+  <app-google-signin #googleSignin (loginWithGoogle)="handleGoogleLogin($event)"></app-google-signin>
+</div>
 <div class="wrapper">
   <div class="content">
     <router-outlet></router-outlet>
