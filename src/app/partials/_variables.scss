@@ -4,7 +4,7 @@
   --sub-title-color: #b7b4b4;
   --nav-text-color: #ffffff;
   --button-color: #ffffff;
-  --anchor-text-color : #e7c118;
+  --anchor-text-color: #e7c118;
 }
 
 .light-theme {
@@ -13,7 +13,7 @@
   --sub-title-color: #575757;
   --nav-text-color: #202020;
   --button-color: #25D366;
-  --anchor-text-color : #0d6efd;
+  --anchor-text-color: #0d6efd;
 }
 
 .li-custom-button {
@@ -27,7 +27,7 @@
   }
 
   a {
-    color: var(--anchor-text-color) !important;
+    color: var(--nav-text-color) !important;
   }
 
   @media (max-width: 992px) {
@@ -391,12 +391,13 @@ li::marker {
   margin: 30px;
   background-color: var(--background-color) !important;
   border-color: var(--text-color) !important;
+
   @media screen and (max-width : 576px) {
     margin: 20px 0px !important;
   }
 }
 
-.card-title{
+.card-title {
   color: var(--text-color) !important;
 }
 
@@ -423,4 +424,5 @@ li::marker {
   justify-content: flex-end;
   align-items: center;
   padding: 10px 20px;
+  font-size: calc(12px  +  (14 - 12) * ((100vw - 320px) / (1920 - 320))) !important;
 }
