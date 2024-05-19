@@ -52,3 +52,10 @@
         font-size: 20px !important;
     }
 }
+
+.main{
+    @media screen and (max-width : 992px) {
+        max-height: 94vh !important;
+        overflow: hidden !important;
+    }
+}

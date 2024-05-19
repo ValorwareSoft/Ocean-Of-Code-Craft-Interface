@@ -1,53 +1,55 @@
-<div *ngIf="result === 'success'">
-    <div class="d-flex justify-content-center align-items-center text-center  success ">
-        <div>
+<div class="main">
+    <div *ngIf="result === 'success'">
+        <div class="d-flex justify-content-center align-items-center text-center  success ">
             <div>
-                <i class="bi bi-envelope-check green-color"></i>
+                <div>
+                    <i class="bi bi-envelope-check green-color"></i>
+                </div>
+                <p class="text-style-1  mb-2 green-color"> Thank you for contacting us! </p>
+                <p class="text-style-2">Your request has been submitted successfully. We will get back to you as
+                    soon as possible.</p>
+                <p class="mt-5 text-style-3" (click)="goToHome()"><i class="bi bi-house-fill"></i> <span>Go to Home</span>
+                </p>
             </div>
-            <p class="text-style-1  mb-2 green-color"> Thank you for contacting us! </p>
-            <p class="text-style-2">Your request has been submitted successfully. We will get back to you as
-                soon as possible.</p>
-            <p class="mt-5 text-style-3" (click)="goToHome()"><i class="bi bi-house-fill"></i> <span>Go to Home</span>
-            </p>
         </div>
     </div>
-</div>
-<div *ngIf="result === 'failed'">
-    <div class="d-flex justify-content-center align-items-center text-center  failed ">
-        <div>
+    <div *ngIf="result === 'failed'">
+        <div class="d-flex justify-content-center align-items-center text-center  failed ">
             <div>
-                <i class="bi bi-emoji-frown red-color"></i>
+                <div>
+                    <i class="bi bi-emoji-frown red-color"></i>
+                </div>
+                <p class="text-style-1  mb-2 red-color"> Submission failed. </p>
+                <p class="text-style-2"> Please ensure all required fields are filled out correctly and try again.</p>
+                <p class="mt-5 text-style-3" (click)="goToHome()"><i class="bi bi-house-fill"></i> <span>Go to Home</span>
             </div>
-            <p class="text-style-1  mb-2 red-color"> Submission failed. </p>
-            <p class="text-style-2"> Please ensure all required fields are filled out correctly and try again.</p>
-            <p class="mt-5 text-style-3" (click)="goToHome()"><i class="bi bi-house-fill"></i> <span>Go to Home</span>
         </div>
     </div>
-</div>
-<div *ngIf="result === 'submitted'">
-    <div class="d-flex justify-content-center align-items-center text-center  success ">
-        <div>
+    <div *ngIf="result === 'submitted'">
+        <div class="d-flex justify-content-center align-items-center text-center  success ">
             <div>
-                <i class="bi bi-check-circle green-color"></i>
+                <div>
+                    <i class="bi bi-check-circle green-color"></i>
+                </div>
+                <p class="text-style-1  mb-2 green-color"> Your request has been successfully submitted! </p>
+                <p class="mt-5 text-style-3" (click)="goToHome()"><i class="bi bi-house-fill"></i> <span>Go to Home</span>
+                </p>
             </div>
-            <p class="text-style-1  mb-2 green-color"> Your request has been successfully submitted! </p>
-            <p class="mt-5 text-style-3" (click)="goToHome()"><i class="bi bi-house-fill"></i> <span>Go to Home</span>
-            </p>
         </div>
     </div>
-</div>
-<div *ngIf="result === 'failure'">
-    <div class="d-flex justify-content-center align-items-center text-center  failed ">
-        <div>
+    <div *ngIf="result === 'failure'">
+        <div class="d-flex justify-content-center align-items-center text-center  failed ">
             <div>
-                <i class="bi bi-emoji-frown red-color"></i>
+                <div>
+                    <i class="bi bi-emoji-frown red-color"></i>
+                </div>
+                <p class="text-style-1  mb-2 red-color"> Oops! Something went wrong. Please try again later. </p>
+                <p class="mt-5 text-style-3" (click)="goToHome()"><i class="bi bi-house-fill"></i> <span>Go to Home</span>
             </div>
-            <p class="text-style-1  mb-2 red-color"> Oops! Something went wrong. Please try again later. </p>
-            <p class="mt-5 text-style-3" (click)="goToHome()"><i class="bi bi-house-fill"></i> <span>Go to Home</span>
         </div>
     </div>
-</div>
-
-<div class="cross">
-    <i class="bi bi-x-lg" (click)="close()" [matTooltip]="CLOSE"></i>
+    
+    <div class="cross">
+        <i class="bi bi-x-lg" (click)="close()" [matTooltip]="CLOSE"></i>
+    </div>
 </div>

@@ -3,6 +3,7 @@
   --text-color: #fff;
   --sub-title-color: #b7b4b4;
   --nav-text-color: #ffffff;
+  --button-color: #ffffff;
 }
 
 .light-theme {
@@ -10,6 +11,7 @@
   --text-color: #202020;
   --sub-title-color: #575757;
   --nav-text-color: #202020;
+  --button-color: #25D366;
 }
 
 .li-custom-button {
@@ -370,11 +372,11 @@ body {
 }
 
 
-.header{
+.header {
   color: var(--text-color);
   font-weight: 500;
 }
 
-li::marker{
+li::marker {
   color: var(--text-color);
 }

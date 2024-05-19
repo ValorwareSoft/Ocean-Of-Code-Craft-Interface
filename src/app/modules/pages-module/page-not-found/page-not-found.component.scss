@@ -1,0 +1,119 @@
+.content {
+    height: 100vh !important;
+    padding: 20px;
+    padding-bottom: 0px !important;
+
+    @media (max-width: 992px) {
+        padding-top: 15px !important;
+    }
+
+    overflow: scroll;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    @media screen and (max-width : 992px) {
+        min-height: 93vh !important;
+    }
+}
+
+.content {
+    margin-top: 60px !important;
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 240px;
+    }
+}
+
+.main-heading {
+    font-size: calc(20px + 2 * (100vw - 320px) / 1600);
+    font-weight: 600;
+    color: red;
+}
+
+.app-footer {
+    margin-top: auto !important;
+}
+
+
+.custom-button {
+    i {
+        font-size: 1rem !important;
+    }
+}
+
+.title {
+    font-family: "Inknut Antiqua", serif;
+    font-weight: 700;
+    font-size: 18px;
+    font-style: normal;
+
+    @media (max-width: 992px) {
+        font-size: 13px;
+    }
+
+    @media (min-width: 992px) {
+        font-size: 18px !important;
+    }
+}
+
+.navbar {
+    img {
+        @media (max-width: 992px) {
+            width: 35px !important;
+            height: 35px !important;
+        }
+
+        @media (min-width: 992px) {
+            width: 60px !important;
+            height: 60px !important;
+        }
+    }
+}
+
+.sub-title {
+
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    letter-spacing: 1.75px;
+
+    @media (max-width: 992px) {
+        font-size: 8px;
+        letter-spacing: 1.5px;
+    }
+
+    @media (min-width: 992px) {
+        font-size: 12px !important;
+        letter-spacing: 1.75px !important;
+    }
+}
+
+
+
+.fixed-top {
+    z-index: 1000 !important;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: calc(14px + 2 * (100vw - 320px) / 1920);
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--button-color);
+    color: var(--background-color);
+}
