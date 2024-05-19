@@ -6,8 +6,8 @@
             <p class="card-text">{{ card.description }}</p>
         </div>
         <div class="d-flex align-items-center justify-content-between">
-            <a [href]="card.previewLink" class="card-link">Preview</a>
-            <a [href]="card.getCodeLink" class="card-link">Get Code</a>
+            <a [routerLink]="card.previewLink" class="card-link">Preview</a>
+            <a [routerLink]="card.getCodeLink" class="card-link">Get Code</a>
         </div>
     </div>
 </div>
