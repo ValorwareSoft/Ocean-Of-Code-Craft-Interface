@@ -10,13 +10,13 @@ import { Subscription } from 'rxjs';
 import { SocialAuthService } from '@abacritt/angularx-social-login';
 
 @Component({
-    selector: 'app-navbar',
-    standalone: true,
-    templateUrl: './navbar.component.html',
-    styleUrls: ['./navbar.component.scss'],
-    imports: [CommonModule, RouterModule, MatTooltipModule, FooterComponent, GoogleSigninComponent]
+  selector: 'app-navbar',
+  standalone: true,
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.scss'],
+  imports: [CommonModule, RouterModule, MatTooltipModule, FooterComponent, GoogleSigninComponent]
 })
-export class NavbarComponent  implements OnInit, OnDestroy, AfterViewInit {
+export class NavbarComponent implements OnInit, OnDestroy, AfterViewInit {
   @ViewChild(GoogleSigninComponent) googleSigninComponent!: GoogleSigninComponent;
 
   constructor(
@@ -30,10 +30,14 @@ export class NavbarComponent  implements OnInit, OnDestroy, AfterViewInit {
   readonly SWITCH_TO_LIGHT_MODE: string = 'Switch To Light Mode';
   login: boolean = false;
   authSubscription!: Subscription;
+  loginUserName: string = '';
+  loginUserPhoto : any;
 
   ngOnInit() {
     this.authSubscription = this.authService.authState.subscribe((user) => {
       console.log('user', user);
+      this.loginUserName = user.name;
+      this.loginUserPhoto = user.photoUrl;
       this.login = !!user;
     });
   }

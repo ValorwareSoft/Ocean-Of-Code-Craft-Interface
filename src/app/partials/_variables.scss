@@ -103,7 +103,7 @@ body {
   margin: 0px !important;
   padding-bottom: 8px;
   font-size: calc(16px + (30 - 16) * ((100vw - 320px) / (1920 - 320)));
-
+  color: var(--text-color);
 }
 
 .sub-title {

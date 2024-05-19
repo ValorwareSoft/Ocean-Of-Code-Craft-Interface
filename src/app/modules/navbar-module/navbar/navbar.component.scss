@@ -99,3 +99,17 @@ img {
 .fixed-top {
     z-index: 1000 !important;
 }
+
+
+.userProfile{
+    display: flex !important;
+    padding-left: 10px !important;
+    margin-top: 5px !important;
+    img{
+        width: 25px !important;
+        height: 25px !important;
+        border-radius: 50% !important;
+
+
+    }
+}
