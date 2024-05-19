@@ -10,6 +10,7 @@ import { LoginComponent } from './navbar-links/login/login.component';
 import { ProfileComponent } from './navbar-links/profile/profile.component';
 import { ChangePasswordComponent } from './navbar-links/change-password/change-password.component';
 import { ServicesComponent } from './navbar-links/services/services.component';
+import { NavbarCodeComponent } from '../main-module/get-code/navbar-code/navbar-code.component';
 
 const routes: Routes = [
   {
@@ -55,9 +56,19 @@ const routes: Routes = [
         component: ChangePasswordComponent,
       },
       {
-        path : 'services',
-        component : ServicesComponent
-      }
+        path: 'services',
+        component: ServicesComponent
+      }, 
+      {
+        path: 'get-code',
+        loadChildren: () =>
+          import('../main-module/get-code/get-code.module').then((mod) => mod.GetCodeModule),
+      },
+      {
+        path: 'preview',
+        loadChildren: () =>
+          import('../main-module/preview/preview.module').then((mod) => mod.PreviewModule),
+      },
     ],
   },
 ];
@@ -66,4 +77,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class NavbarRoutingModule {}
+export class NavbarRoutingModule { }
