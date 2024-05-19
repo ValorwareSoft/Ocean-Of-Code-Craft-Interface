@@ -2,7 +2,7 @@
   display: block;
   background-color: var(--background-color);
   color: var(--text-color);
-  
+
 }
 
 ::ng-deep .bg-light {
@@ -16,5 +16,9 @@
 
 body {
   background-color: var(--background-color) ;
+}
+
+a{
+  color: var(--anchor-text-color) !important;
 }
 

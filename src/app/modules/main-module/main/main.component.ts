@@ -1,22 +1,37 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
+import { FooterComponent } from "../../pages-module/footer/footer/footer.component";
 
 @Component({
   selector: 'app-main',
   standalone: true,
-  imports: [CommonModule],
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss'],
+  imports: [CommonModule, FooterComponent]
 })
 export class MainComponent {
-  constructor(private router: Router) {}
+  cardsData = [
+    {
+      imageUrl: '../../../../../assets/images/ux-design.jpg',
+      title: 'UX Design Services',
+      description: 'Unlock the potential of your digital vision with our comprehensive UX Design Services. We specialize in crafting captivating user experiences that seamlessly blend functionality with aesthetics, ensuring your applications leave a lasting impression.',
+      previewLink: '/main/preview/navbar',
+      getCodeLink : '/main/get-code/navbar'
+    },
+    {
+      imageUrl: '../../../../../assets/images/ux-design.jpg',
+      title: 'UX Design Services',
+      description: 'Unlock the potential of your digital vision with our comprehensive UX Design Services. We specialize in crafting captivating user experiences that seamlessly blend functionality with aesthetics, ensuring your applications leave a lasting impression.',
+      previewLink: '/main/preview/header',
+      getCodeLink : '/main/get-code/header'
+    },
+    {
+      imageUrl: '../../../../../assets/images/ux-design.jpg',
+      title: 'UX Design Services',
+      description: 'Unlock the potential of your digital vision with our comprehensive UX Design Services. We specialize in crafting captivating user experiences that seamlessly blend functionality with aesthetics, ensuring your applications leave a lasting impression.',
+      previewLink: '/main/preview/navbar',
+      getCodeLink : '/main/get-code/navbar'
+    },
 
-  previewCode() {
-    this.router.navigate(['/main/preview/navbar-preview']);
-  }
-
-  getCode() {
-    this.router.navigate(['/main/get-code/header-getcode']);
-  }
+  ];
 }

@@ -5,11 +5,11 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'header-getcode',
+    path: 'header',
     component: HeaderCodeComponent,
   },
   {
-    path: 'navbar-getcode',
+    path: 'navbar',
     component: NavbarCodeComponent,
   },
 ];

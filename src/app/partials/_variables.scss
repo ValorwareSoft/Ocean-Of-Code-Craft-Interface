@@ -4,6 +4,7 @@
   --sub-title-color: #b7b4b4;
   --nav-text-color: #ffffff;
   --button-color: #ffffff;
+  --anchor-text-color : #e7c118;
 }
 
 .light-theme {
@@ -12,6 +13,7 @@
   --sub-title-color: #575757;
   --nav-text-color: #202020;
   --button-color: #25D366;
+  --anchor-text-color : #0d6efd;
 }
 
 .li-custom-button {
@@ -25,7 +27,7 @@
   }
 
   a {
-    color: var(--nav-text-color) !important;
+    color: var(--anchor-text-color) !important;
   }
 
   @media (max-width: 992px) {
@@ -118,7 +120,8 @@ body {
   font-size: 16px;
   font-weight: 450;
   margin-bottom: 10px;
-  font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
+  color: var(--text-color) !important;
+  font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320))) !important;
 }
 
 
@@ -379,4 +382,45 @@ body {
 
 li::marker {
   color: var(--text-color);
+}
+
+
+.card {
+  max-width: 300px;
+  min-width: 300px;
+  margin: 30px;
+  background-color: var(--background-color) !important;
+  border-color: var(--text-color) !important;
+  @media screen and (max-width : 576px) {
+    margin: 20px 0px !important;
+  }
+}
+
+.card-title{
+  color: var(--text-color) !important;
+}
+
+.card-text {
+  text-align: justify;
+  font-size: 13px !important;
+  color: var(--sub-title-color) !important;
+}
+
+.card-body {
+  padding: 20px !important;
+  padding-bottom: 10px !important;
+}
+
+.main-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-link {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 20px;
 }

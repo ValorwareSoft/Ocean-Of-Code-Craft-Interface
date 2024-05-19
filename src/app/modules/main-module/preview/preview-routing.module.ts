@@ -5,11 +5,11 @@ import { NavbarComponent } from './navbar/navbar.component';
 
 const routes: Routes = [
   {
-    path: 'header-preview',
+    path: 'header',
     component: HeaderComponent,
   },
   {
-    path: 'navbar-preview',
+    path: 'navbar',
     component: NavbarComponent,
   },
 ];
