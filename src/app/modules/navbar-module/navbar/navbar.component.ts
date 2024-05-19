@@ -77,6 +77,7 @@ export class NavbarComponent  implements OnInit, OnDestroy, AfterViewInit {
       case 'logout':
         this.login = false;
         this.router.navigate(['/home']);
+        this.toastr.success("Logged Out Successfully");
         break;
     }
   }
