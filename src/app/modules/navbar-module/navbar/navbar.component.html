@@ -29,6 +29,9 @@
         <li class="nav-item">
           <a class="nav-link" (click)="navigate('about-us')">About Us</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="navigate('services')">Services</a>
+        </li>
 
         <li class="nav-item">
           <a class="nav-link" (click)="navigate('get-custom-code')">Get Customised Code</a>
@@ -38,11 +41,14 @@
           <a class="nav-link" (click)="navigate('contact-us')">Contact Us</a>
         </li>
 
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="!login">
           <a class="nav-link" (click)="navigate('sign-up')">Sign Up</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item"  *ngIf="!login">
           <a class="nav-link" (click)="navigate('login')">Login</a>
+        </li>
+        <li class="nav-item"  *ngIf="login">
+          <a class="nav-link" (click)="navigate('logout')">Logout</a>
         </li>
         <li class="nav-item li-custom-button">
           <a (click)="toggleTheme()">

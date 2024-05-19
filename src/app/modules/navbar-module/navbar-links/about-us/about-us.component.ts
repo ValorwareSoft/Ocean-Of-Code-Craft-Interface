@@ -1,24 +1,39 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule, Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-about-us',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './about-us.component.html',
   styleUrls: ['./about-us.component.scss']
 })
 export class AboutUsComponent {
-  // components: string[] = [
-  //   'Login Forms', 'Sign-Up Forms', 'Headers', 'Navigation Bars', 'Side Menus',
-  //   'Charts', 'Tables', 'Popups', 'Toasters', 'Footers', 'Carousels', 'Modals',
-  //   'Accordions', 'Tooltips', 'Progress Bars', 'Tabs', 'Forms', 'Grids', 'Buttons',
-  //   'Badges', 'Alerts', 'Breadcrumbs', 'Pagination', 'Cards', 'Dropdowns',
-  //   'Jumbotrons', 'Media Objects', 'Lists', 'Spinners', 'Toast Notifications',
-  //   'Calendar Widgets', 'Image Galleries', 'Responsive Tables', 'Search Bars',
-  //   'Input Groups', 'File Uploads', 'Date Pickers', 'Sliders', 'Graphs',
-  //   'Multi-step Forms', 'Data Visualization Tools', 'Interactive Maps',
-  //   'Social Media Buttons', 'Authentication Components', 'API Integration Snippets',
-  //   'Code Snippets for Animations', 'Lazy Loading Components'
-  // ];
+
+  constructor(
+    private router: Router, private toastr: ToastrService
+  ) { }
+  login: boolean = true;
+  navigate(link: string) {
+    switch (link) {
+      case 'home':
+        this.router.navigate(['/home']);
+        break;
+      case 'contact-us':
+        this.router.navigate(['/contact-us']);
+        break;
+      case 'get-custom-code':
+        if (this.login) {
+          this.router.navigate(['/get-custom-code']);
+        } else {
+          this.toastr.error('Please Login To Get Customised Code');
+        }
+        break;
+      case 'services':
+        this.router.navigate(['/services']);
+        break;
+    }
+  }
 }

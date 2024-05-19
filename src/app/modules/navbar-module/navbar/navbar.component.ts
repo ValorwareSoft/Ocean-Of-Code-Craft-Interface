@@ -3,15 +3,15 @@ import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
 import { ThemeService } from 'src/app/services/theme-service/theme.service';
 import { ToastrService } from 'ngx-toastr';
-import { MatTooltipModule} from '@angular/material/tooltip';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { FooterComponent } from "../../pages-module/footer/footer/footer.component";
 
 @Component({
-    selector: 'app-navbar',
-    standalone: true,
-    templateUrl: './navbar.component.html',
-    styleUrls: ['./navbar.component.scss'],
-    imports: [CommonModule, RouterModule, MatTooltipModule, FooterComponent]
+  selector: 'app-navbar',
+  standalone: true,
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.scss'],
+  imports: [CommonModule, RouterModule, MatTooltipModule, FooterComponent]
 })
 export class NavbarComponent {
   constructor(
@@ -19,8 +19,8 @@ export class NavbarComponent {
     public themeService: ThemeService,
     private toastr: ToastrService
   ) { }
-  readonly SWITCH_TO_DARK_MODE : string = 'Switch To Dark Mode';
-  readonly SWITCH_TO_LIGHT_MODE : string = 'Switch To Light Mode';
+  readonly SWITCH_TO_DARK_MODE: string = 'Switch To Dark Mode';
+  readonly SWITCH_TO_LIGHT_MODE: string = 'Switch To Light Mode';
   login: boolean = true;
   navigate(link: string) {
     switch (link) {
@@ -40,6 +40,9 @@ export class NavbarComponent {
           this.toastr.error('Please Login To Get Customised Code');
         }
         break;
+      case 'services':
+        this.router.navigate(['/services']);
+        break;
       case 'sign-up':
         this.router.navigate(['/sign-up']);
         break;
@@ -56,11 +59,11 @@ export class NavbarComponent {
     this.themeService.toggleDarkMode();
   }
 
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
 
 }

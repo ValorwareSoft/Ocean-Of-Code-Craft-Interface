@@ -9,6 +9,7 @@ import { SignUpComponent } from './navbar-links/sign-up/sign-up.component';
 import { LoginComponent } from './navbar-links/login/login.component';
 import { ProfileComponent } from './navbar-links/profile/profile.component';
 import { ChangePasswordComponent } from './navbar-links/change-password/change-password.component';
+import { ServicesComponent } from './navbar-links/services/services.component';
 
 const routes: Routes = [
   {
@@ -52,6 +53,10 @@ const routes: Routes = [
       {
         path: 'change-password',
         component: ChangePasswordComponent,
+      },
+      {
+        path : 'services',
+        component : ServicesComponent
       }
     ],
   },
